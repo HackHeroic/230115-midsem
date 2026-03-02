@@ -1,0 +1,21 @@
+# Jupyter Notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Data and Downloads
+data/
+hedau/
+*.zip
+*.mat
+*.pdf
+
+# macOS system files
+.DS_Store
+
+# Cursor/VSCode workspace folders
+.cursor/
+.vscode/

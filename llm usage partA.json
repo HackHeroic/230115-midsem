@@ -1,0 +1,134 @@
+{
+  "student_metadata": {
+    "name": "Madhav",
+    "roll_number": "230115",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part A",
+    "submission_date": "2026-03-02"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "provider": "Google"
+    },
+    {
+      "tool_name": "Cursor",
+      "model": "Claude Opus 4.5",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-01",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Identifying classical ML papers on advanced SVM and Time Series applications.",
+      "prompt": "I have decided to focus my mid-semester exam research on either advanced SVM applications in computer vision or complex Time Series models like SARIMAX, as these areas align with my interests. Can you suggest some high-impact classical machine learning papers from CORE A* conferences (like NIPS, ICML, CVPR) published between 2009 and 2012 that focus on novel formulations in these two domains?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Provided a curated list of high-impact papers across both domains, allowing me to compare the feasibility of SARIMAX papers versus SVM papers before settling on the 2010 NIPS paper by Lee et al.",
+      "student_verification": "Cross-referenced the suggested papers with the CORE ranking database and Google Scholar to confirm they met the venue and year constraints.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-01",
+      "tool_name": "Cursor",
+      "model": "Claude Opus 4.5",
+      "purpose": "Assessing computational feasibility and reproducibility constraints.",
+      "prompt": "I am considering the 2010 NIPS paper 'Estimating Spatial Layout of Rooms using Volumetric Reasoning about Objects and Surfaces'. What are the key computational bottlenecks in reproducing this paper's Structured SVM formulation, and is it feasible to run a simplified optimization on a standard CPU without GPU acceleration?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Helped me understand that solving the full quadratic programming problem with exponential constraints is heavy, but can be approximated using random search or beam search for CPU feasibility.",
+      "student_verification": "Reviewed the optimization section (5.2) of the paper to confirm that late-commitment search strategies (beam search) can effectively approximate the solution on a CPU.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-01",
+      "tool_name": "Cursor",
+      "model": "Claude Opus 4.5",
+      "purpose": "Deepening understanding of the core mathematical formulation.",
+      "prompt": "How does the Structured SVM formulation in Lee et al.'s 2010 paper differ from a standard SVM? Specifically, how is the cost function f(x, y) = w^T psi(x, y) + w_phi^T phi(y) structured to penalize physical constraints like spatial exclusion and containment?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Clarified the separation between the appearance feature vector (psi) and the volumetric penalty term (phi) that enforces 3D physics.",
+      "student_verification": "Manually derived the loss function components and matched the penalty term with the paper's description of containment constraints.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-02",
+      "tool_name": "Cursor",
+      "model": "Claude Opus 4.5",
+      "purpose": "Designing a reproducible and simplified experimental setup.",
+      "prompt": "The Lee et al. paper relies on complex 'Orientation Maps'. Since I need to simplify the pipeline for reproducibility, can I substitute the line-sweeping algorithm with a standard superpixel segmentation (like SLIC) and HOG features trained via an RBF kernel SVM to estimate the initial surface geometry?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Validated my idea to swap out an obsolete 2010 computer vision subroutine with a standard, robust scikit-learn pipeline.",
+      "student_verification": "Implemented a small prototype using scikit-learn and SLIC on the Hedau dataset to verify that the extracted features yield reasonable geometric context predictions.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 5,
+      "date": "2026-03-02",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Critically analyzing assumptions, limitations, and failure modes.",
+      "prompt": "What are the theoretical limitations and edge cases of modeling all objects strictly as 3D cuboids resting on the floor in Lee et al.'s framework? How would errors in the vanishing point estimation cascade through the volumetric reasoning pipeline?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Highlighted severe occlusion, non-cuboidal objects (like spherical lamps), and vanishing point clustering errors as primary failure modes.",
+      "student_verification": "Analyzed Figure 6 in the paper, confirming that severe occlusion and incorrect vanishing points break the cuboid fitting, which distorts the final spatial layout.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 6,
+      "date": "2026-03-02",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Evaluating the robustness of the experimental metrics.",
+      "prompt": "For evaluating the layout estimation, the paper uses a pixel-wise error metric. What are the potential drawbacks of this metric when dealing with heavily cluttered scenes, and does it adequately penalize physically impossible room configurations?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Discussed how pixel-wise metrics might heavily weight large walls but ignore crucial structural violations.",
+      "student_verification": "Observed that while the metric measures surface area overlap, the Structured SVM's penalty term specifically handles physical impossibilities, showing a clear division of labor.",
+      "confidence_level": 4
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 3,
+      "prompt": "How does the Structured SVM formulation in Lee et al.'s 2010 paper differ from a standard SVM? Specifically, how is the cost function f(x, y) = w^T psi(x, y) + w_phi^T phi(y) structured to penalize physical constraints like spatial exclusion and containment?",
+      "why_important": "This question proved central to my entire implementation. It forced me to dissect the mathematical formulation of the Structured SVM and understand how physical 3D constraints can be translated into an ML loss penalty."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 5,
+      "prompt": "What are the theoretical limitations and edge cases of modeling all objects strictly as 3D cuboids resting on the floor in Lee et al.'s framework? How would errors in the vanishing point estimation cascade through the volumetric reasoning pipeline?",
+      "why_important": "This highly critical question allowed me to form a strong perspective on the paper's rigid assumptions, which became the cornerstone of my diagnostic experiments and failure analysis in Part B."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 6,
+      "prompt": "For evaluating the layout estimation, the paper uses a pixel-wise error metric. What are the potential drawbacks of this metric when dealing with heavily cluttered scenes, and does it adequately penalize physically impossible room configurations?",
+      "why_important": "It demonstrated my ability to critique not just the methodology but also the evaluation metrics used by the authors, revealing that pixel-wise error might hide severe but localized physical impossibilities."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 2,
+      "prompt": "I am considering the 2010 NIPS paper 'Estimating Spatial Layout of Rooms using Volumetric Reasoning about Objects and Surfaces'. What are the key computational bottlenecks in reproducing this paper's Structured SVM formulation, and is it feasible to run a simplified optimization on a standard CPU without GPU acceleration?",
+      "why_important": "This was the key feasibility test. It required analyzing the algorithmic complexity of exact inference versus approximate inference (beam search) to ensure the paper could be reproduced strictly within a CPU-only environment."
+    },
+    {
+      "rank": 5,
+      "interaction_id": 4,
+      "prompt": "The Lee et al. paper relies on complex 'Orientation Maps'. Since I need to simplify the pipeline for reproducibility, can I substitute the line-sweeping algorithm with a standard superpixel segmentation (like SLIC) and HOG features trained via an RBF kernel SVM to estimate the initial surface geometry?",
+      "why_important": "This prompt showed practical engineering sense by replacing a brittle, obsolete computer vision subroutine with a robust, standard scikit-learn pipeline, ensuring the core idea of the paper could still be evaluated."
+    }
+  ],
+  "student declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part A.",
+    "understanding acknowledged": true,
+    "signature": "Madhav",
+    "date": "2026-03-02"
+  }
+}
