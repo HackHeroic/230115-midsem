@@ -27,3 +27,8 @@ hedau/
 !partB/data/hedau/
 partB/data/hedau/*
 !partB/data/hedau/groundtruth.zip
+
+# Allow required Part B PDFs
+!partB/report.pdf
+!partB/references/
+!partB/references/*.pdf
