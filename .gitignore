@@ -22,3 +22,8 @@ hedau/
 # Keep required Part B data folder in repo
 !partB/data/
 !partB/data/README.md
+
+# Allow only compressed Hedau dataset for offline reproducibility
+!partB/data/hedau/
+partB/data/hedau/*
+!partB/data/hedau/groundtruth.zip
