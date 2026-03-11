@@ -5,7 +5,7 @@
     "course": "Advanced Machine Learning",
     "exam": "Mid-Semester Examination",
     "part": "Part B",
-    "submission_date": "2026-03-11"
+    "submission_date": "2026-03-12"
   },
   "llm_tools_used": [
     {
@@ -25,11 +25,41 @@
       "date": "2026-03-11",
       "tool_name": "Cursor",
       "model": "GPT-based assistant",
-      "purpose": "Result comparison and reproducibility checklist",
-      "prompt": "How should I write an honest result-gap explanation between toy setup and paper benchmark?",
+      "purpose": "Result-gap explanation",
+      "prompt": "How should I write a 3-5 sentence gap analysis between my 50.26% and paper ~16.2%?",
       "llm_response_used": "Partially",
-      "how_it_helped": "Helped structure the task and improve clarity while keeping implementation decisions mine.",
-      "student_verification": "I cross-checked outputs against notebook code/results and the selected paper before keeping anything.",
+      "how_it_helped": "Gave a balanced template emphasizing setup differences over inflated claims.",
+      "student_verification": "I aligned the final explanation with actual model simplifications and observed outputs.",
+      "confidence_level": 5,
+      "task tag": "Task 2.3",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Checklist completeness",
+      "prompt": "Provide a reproducibility checklist aligned with Part B requirements.",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Helped ensure all mandatory checklist points were explicitly present.",
+      "student_verification": "Verified each checklist item against notebook/code state before submission.",
+      "confidence_level": 5,
+      "task tag": "Task 2.3",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Visualization communication",
+      "prompt": "Suggest one figure caption style for prediction-vs-ground-truth saved plot.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Improved caption clarity for report reuse.",
+      "student_verification": "Used only concise phrasing; figure data comes from executed notebook output.",
       "confidence_level": 4,
       "task tag": "Task 2.3",
       "code used verbatim": false,
@@ -40,14 +70,26 @@
     {
       "rank": 1,
       "interaction_id": 1,
-      "prompt": "How should I write an honest result-gap explanation between toy setup and paper benchmark?",
-      "why_important": "This directly improved task-specific reasoning and output quality."
+      "prompt": "How should I write a 3-5 sentence gap analysis between my 50.26% and paper ~16.2%?",
+      "why_important": "Most important prompt for writing an honest, non-defensive gap discussion."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "Provide a reproducibility checklist aligned with Part B requirements.",
+      "why_important": "Directly improved rubric compliance for reproducibility reporting."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "Suggest one figure caption style for prediction-vs-ground-truth saved plot.",
+      "why_important": "Helped produce clearer figure context for report writing."
     }
   ],
   "student declaration": {
     "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this Part B task.",
     "understanding acknowledged": true,
     "signature": "Madhav",
-    "date": "2026-03-11"
+    "date": "2026-03-12"
   }
 }

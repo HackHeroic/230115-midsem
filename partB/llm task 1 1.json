@@ -5,7 +5,7 @@
     "course": "Advanced Machine Learning",
     "exam": "Mid-Semester Examination",
     "part": "Part B",
-    "submission_date": "2026-03-11"
+    "submission_date": "2026-03-12"
   },
   "llm_tools_used": [
     {
@@ -22,14 +22,44 @@
   "full_llm_interaction_log": [
     {
       "interaction_id": 1,
-      "date": "2026-03-11",
+      "date": "2026-03-10",
       "tool_name": "Cursor",
       "model": "GPT-based assistant",
-      "purpose": "Writing paper-specific method explanation",
-      "prompt": "Draft a step-by-step explanation of Lee et al. (2010) with section/figure references and no generic text.",
+      "purpose": "Structuring paper-specific method steps",
+      "prompt": "Convert Lee et al. 2010 into a step-by-step method explanation with section/figure links and avoid generic SVM/GMM text.",
       "llm_response_used": "Partially",
-      "how_it_helped": "Helped structure the task and improve clarity while keeping implementation decisions mine.",
-      "student_verification": "I cross-checked outputs against notebook code/results and the selected paper before keeping anything.",
+      "how_it_helped": "It gave a clean step template that I then aligned with my own reading notes from Sections 2, 4, and 5.",
+      "student_verification": "Rechecked every step against the paper PDF and removed any wording that could not be traced to a section/figure.",
+      "confidence_level": 5,
+      "task tag": "Task 1.1",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-10",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Improving technical precision",
+      "prompt": "Which parts of Lee et al. correspond to hypothesis generation, volumetric compatibility, and inference in one concise mapping?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped compress the method flow without losing paper specificity.",
+      "student_verification": "Verified mapping against Figure 2, Section 4.1/4.2/4.3 and Section 5.1 before writing final markdown.",
+      "confidence_level": 4,
+      "task tag": "Task 1.1",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-10",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Final phrasing quality",
+      "prompt": "Rewrite my final summary sentence so it states problem + claimed improvement in one line.",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Improved clarity of my own summary sentence.",
+      "student_verification": "Kept only the final sentence style; technical claims were still validated from paper text.",
       "confidence_level": 4,
       "task tag": "Task 1.1",
       "code used verbatim": false,
@@ -40,14 +70,26 @@
     {
       "rank": 1,
       "interaction_id": 1,
-      "prompt": "Draft a step-by-step explanation of Lee et al. (2010) with section/figure references and no generic text.",
-      "why_important": "This directly improved task-specific reasoning and output quality."
+      "prompt": "Convert Lee et al. 2010 into a step-by-step method explanation with section/figure links and avoid generic SVM/GMM text.",
+      "why_important": "This prompt prevented a generic answer and forced paper-grounded step writing."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "Which parts of Lee et al. correspond to hypothesis generation, volumetric compatibility, and inference in one concise mapping?",
+      "why_important": "It improved the section-to-step mapping used in my final markdown."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "Rewrite my final summary sentence so it states problem + claimed improvement in one line.",
+      "why_important": "It made the closing claim concise and viva-friendly."
     }
   ],
   "student declaration": {
     "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this Part B task.",
     "understanding acknowledged": true,
     "signature": "Madhav",
-    "date": "2026-03-11"
+    "date": "2026-03-12"
   }
 }

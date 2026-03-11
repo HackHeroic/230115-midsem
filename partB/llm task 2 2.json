@@ -5,7 +5,7 @@
     "course": "Advanced Machine Learning",
     "exam": "Mid-Semester Examination",
     "part": "Part B",
-    "submission_date": "2026-03-11"
+    "submission_date": "2026-03-12"
   },
   "llm_tools_used": [
     {
@@ -25,11 +25,56 @@
       "date": "2026-03-11",
       "tool_name": "Cursor",
       "model": "GPT-based assistant",
-      "purpose": "Implementing and annotating reproduction steps",
-      "prompt": "Help structure code-to-paper annotations for a simplified reproduction of volumetric compatibility scoring.",
+      "purpose": "Code-to-paper annotation planning",
+      "prompt": "Given my reproduction cells, where should I place markdown annotations to map code blocks to paper sections?",
       "llm_response_used": "Partially",
-      "how_it_helped": "Helped structure the task and improve clarity while keeping implementation decisions mine.",
-      "student_verification": "I cross-checked outputs against notebook code/results and the selected paper before keeping anything.",
+      "how_it_helped": "Helped place annotations after each major block (features, hypotheses, constraints, inference).",
+      "student_verification": "Compared each annotation with section numbers from the paper before keeping it.",
+      "confidence_level": 5,
+      "task tag": "Task 2.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-11",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Simplification honesty",
+      "prompt": "How do I explain random-search weight optimization vs full Structured SVM without sounding misleading?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Improved transparent wording around implementation deviation.",
+      "student_verification": "Final wording was checked against Section 5.2 and my executed notebook outputs.",
+      "confidence_level": 5,
+      "task tag": "Task 2.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Debug support",
+      "prompt": "I got a NameError while evaluating subset because evaluate_dataset is not defined in this notebook. Suggest a minimal local evaluation loop using existing functions.",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Provided a short loop template that I adapted to my variables.",
+      "student_verification": "I modified variable names and logic to match my notebook; the final cell was executed successfully.",
+      "confidence_level": 4,
+      "task tag": "Task 2.2",
+      "code used verbatim": true,
+      "student modification": "Adapted loop structure to existing functions (`beam_search`, `evaluate_loss`) and changed variable bindings for my notebook context."
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Interpretation quality",
+      "prompt": "Give a short interpretation sentence for subset metric that is honest and paper-aligned.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped tighten my interpretation sentence.",
+      "student_verification": "Kept only the narrative style; metric and claims were based on executed outputs.",
       "confidence_level": 4,
       "task tag": "Task 2.2",
       "code used verbatim": false,
@@ -40,14 +85,32 @@
     {
       "rank": 1,
       "interaction_id": 1,
-      "prompt": "Help structure code-to-paper annotations for a simplified reproduction of volumetric compatibility scoring.",
-      "why_important": "This directly improved task-specific reasoning and output quality."
+      "prompt": "Given my reproduction cells, where should I place markdown annotations to map code blocks to paper sections?",
+      "why_important": "Improved notebook readability and rubric alignment for code-to-paper mapping."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "How do I explain random-search weight optimization vs full Structured SVM without sounding misleading?",
+      "why_important": "Important for academic honesty in reporting simplifications."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "I got a NameError while evaluating subset because evaluate_dataset is not defined in this notebook. Suggest a minimal local evaluation loop using existing functions.",
+      "why_important": "This resolved a real implementation issue while keeping understanding-driven edits."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 4,
+      "prompt": "Give a short interpretation sentence for subset metric that is honest and paper-aligned.",
+      "why_important": "Helped keep interpretation concise and defensible."
     }
   ],
   "student declaration": {
     "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this Part B task.",
     "understanding acknowledged": true,
     "signature": "Madhav",
-    "date": "2026-03-11"
+    "date": "2026-03-12"
   }
 }

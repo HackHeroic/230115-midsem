@@ -5,7 +5,7 @@
     "course": "Advanced Machine Learning",
     "exam": "Mid-Semester Examination",
     "part": "Part B",
-    "submission_date": "2026-03-11"
+    "submission_date": "2026-03-12"
   },
   "llm_tools_used": [
     {
@@ -25,11 +25,26 @@
       "date": "2026-03-11",
       "tool_name": "Cursor",
       "model": "GPT-based assistant",
-      "purpose": "Designing toy dataset and setup justification",
-      "prompt": "Suggest a CPU-only toy dataset setup for room-layout estimation aligned with volumetric reasoning ideas.",
+      "purpose": "Dataset-setup justification",
+      "prompt": "How should I justify using the same Hedau loading pipeline from reproduction.ipynb for Task 2.1?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Helped frame a concise justification that connects to paper problem type and reproducibility.",
+      "student_verification": "Matched final text with actual code path used in notebook (download + semantic mapping + split).",
+      "confidence_level": 5,
+      "task tag": "Task 2.1",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Preprocessing documentation",
+      "prompt": "List preprocessing details I should explicitly mention for my superpixel + feature pipeline.",
       "llm_response_used": "Partially",
-      "how_it_helped": "Helped structure the task and improve clarity while keeping implementation decisions mine.",
-      "student_verification": "I cross-checked outputs against notebook code/results and the selected paper before keeping anything.",
+      "how_it_helped": "Provided checklist-style wording for preprocessing disclosure.",
+      "student_verification": "Kept only steps that actually exist in my notebook cells.",
       "confidence_level": 4,
       "task tag": "Task 2.1",
       "code used verbatim": false,
@@ -40,14 +55,20 @@
     {
       "rank": 1,
       "interaction_id": 1,
-      "prompt": "Suggest a CPU-only toy dataset setup for room-layout estimation aligned with volumetric reasoning ideas.",
-      "why_important": "This directly improved task-specific reasoning and output quality."
+      "prompt": "How should I justify using the same Hedau loading pipeline from reproduction.ipynb for Task 2.1?",
+      "why_important": "This tied my narrative directly to the real pipeline I executed."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "List preprocessing details I should explicitly mention for my superpixel + feature pipeline.",
+      "why_important": "Ensured preprocessing was explicitly documented."
     }
   ],
   "student declaration": {
     "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this Part B task.",
     "understanding acknowledged": true,
     "signature": "Madhav",
-    "date": "2026-03-11"
+    "date": "2026-03-12"
   }
 }
