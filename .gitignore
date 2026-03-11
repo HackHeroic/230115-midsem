@@ -18,3 +18,7 @@ hedau/
 # Cursor/VSCode workspace folders
 .cursor/
 .vscode/
+
+# Keep required Part B data folder in repo
+!partB/data/
+!partB/data/README.md
