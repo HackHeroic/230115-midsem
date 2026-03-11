@@ -1,0 +1,95 @@
+{
+  "student_metadata": {
+    "name": "C Murali Madhav",
+    "roll_number": "230115",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "provider": "OpenAI"
+    },
+    {
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "provider": "Google"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Ablation design",
+      "prompt": "Suggest two independent ablations for my existing reproduction pipeline without changing paper scope.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped select practical ablations: no constraints and single room hypothesis.",
+      "student_verification": "Confirmed both ablations are one-at-a-time and executable in my current code path.",
+      "confidence_level": 5,
+      "task tag": "Task 3.1",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Interpretation depth",
+      "prompt": "How should I interpret if NoConstraints does not degrade much but SingleRoomHyp degrades strongly?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped frame component-sensitivity interpretation without overclaiming.",
+      "student_verification": "I tied final interpretation to actual ablation bars and model structure.",
+      "confidence_level": 5,
+      "task tag": "Task 3.1",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Viva readiness",
+      "prompt": "Give 3 likely viva follow-ups for these ablation results and what evidence to cite.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped prepare evidence-based justifications for oral questioning.",
+      "student_verification": "Prepared notes but kept final notebook text in my own wording.",
+      "confidence_level": 4,
+      "task tag": "Task 3.1",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Suggest two independent ablations for my existing reproduction pipeline without changing paper scope.",
+      "why_important": "Defined the ablation structure that I actually implemented."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "How should I interpret if NoConstraints does not degrade much but SingleRoomHyp degrades strongly?",
+      "why_important": "Critical for explaining non-intuitive ablation pattern honestly."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "Give 3 likely viva follow-ups for these ablation results and what evidence to cite.",
+      "why_important": "Useful for viva preparedness and evidence linking."
+    }
+  ],
+  "student declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this Part B task.",
+    "understanding acknowledged": true,
+    "signature": "Madhav",
+    "date": "2026-03-12"
+  }
+}

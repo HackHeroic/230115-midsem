@@ -1,0 +1,95 @@
+{
+  "student_metadata": {
+    "name": "C Murali Madhav",
+    "roll_number": "230115",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "provider": "OpenAI"
+    },
+    {
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "provider": "Google"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Disclosure validation",
+      "prompt": "Check whether each Part B JSON must include task tag, code used verbatim, and student modification fields.",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed mandatory fields for every interaction record.",
+      "student_verification": "I validated all files and ensured these fields are present for each interaction.",
+      "confidence_level": 5,
+      "task tag": "Task 4.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-12",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Quality upgrade",
+      "prompt": "How to make LLM logs sound understanding-driven instead of copy-paste driven?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Provided guidelines for richer prompts, verification text, and adaptation notes.",
+      "student_verification": "I rewrote logs using my actual prompts/workflow and added verification statements tied to notebook outputs.",
+      "confidence_level": 5,
+      "task tag": "Task 4.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-12",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Top prompts curation",
+      "prompt": "How should I select top prompts so they are task-relevant and genuinely impactful?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped prioritize prompts that changed decisions, debugging, or interpretation quality.",
+      "student_verification": "Final ranked prompts were selected only from each file's own interaction log.",
+      "confidence_level": 4,
+      "task tag": "Task 4.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Check whether each Part B JSON must include task tag, code used verbatim, and student modification fields.",
+      "why_important": "Ensured structural compliance of all Part B disclosure files."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "How to make LLM logs sound understanding-driven instead of copy-paste driven?",
+      "why_important": "Critical to convey honest, understanding-first LLM usage."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "How should I select top prompts so they are task-relevant and genuinely impactful?",
+      "why_important": "Improved prompt ranking quality and relevance."
+    }
+  ],
+  "student declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this Part B task.",
+    "understanding acknowledged": true,
+    "signature": "Madhav",
+    "date": "2026-03-12"
+  }
+}

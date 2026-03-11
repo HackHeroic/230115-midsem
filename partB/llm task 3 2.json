@@ -1,0 +1,95 @@
+{
+  "student_metadata": {
+    "name": "C Murali Madhav",
+    "roll_number": "230115",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "provider": "OpenAI"
+    },
+    {
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "provider": "Google"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Failure-mode setup",
+      "prompt": "Propose one failure scenario using my current pipeline that can be implemented quickly and reproducibly.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested no-object-hypothesis intervention compatible with my code.",
+      "student_verification": "I implemented and measured the scenario directly in notebook outputs.",
+      "confidence_level": 5,
+      "task tag": "Task 3.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-11",
+      "tool_name": "Cursor",
+      "model": "GPT-based assistant",
+      "purpose": "Honest interpretation",
+      "prompt": "Write a defensible explanation when failure degradation is marginal (50.94% to 51.09%).",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Helped me state limitations without pretending strong effect.",
+      "student_verification": "Final text uses exact measured numbers from executed cell output.",
+      "confidence_level": 5,
+      "task tag": "Task 3.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-11",
+      "tool_name": "Gemini",
+      "model": "Gemini Research",
+      "purpose": "Stronger-next-experiment thinking",
+      "prompt": "What is a better future failure test if current intervention barely changes metric?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Provided options like VP corruption and room-hypothesis degradation.",
+      "student_verification": "Kept recommendations that are consistent with my current pipeline behavior.",
+      "confidence_level": 4,
+      "task tag": "Task 3.2",
+      "code used verbatim": false,
+      "student modification": "Not applicable"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Propose one failure scenario using my current pipeline that can be implemented quickly and reproducibly.",
+      "why_important": "Defined a realistic, code-compatible failure intervention."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "Write a defensible explanation when failure degradation is marginal (50.94% to 51.09%).",
+      "why_important": "Most important for honest and high-quality narrative in the report/notebook."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "What is a better future failure test if current intervention barely changes metric?",
+      "why_important": "Added credible future-work direction for stronger evidence."
+    }
+  ],
+  "student declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this Part B task.",
+    "understanding acknowledged": true,
+    "signature": "Madhav",
+    "date": "2026-03-12"
+  }
+}
